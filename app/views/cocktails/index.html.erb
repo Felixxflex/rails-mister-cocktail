@@ -1,0 +1,23 @@
+
+<div class="banner" >
+  <div class="container">
+    <h1>Drippy Cocktails</h1>
+  </div>
+</div>
+
+<% @cocktails.each do |cocktail|%>
+<div class="card-trip">
+  <img src="https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id) %></h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-trip-pricing">Donald Trump</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+<%end%>
+
+
+<%= link_to "Create new", new_cocktail_path %>
