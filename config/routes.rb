@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :doses, only: [ :new, :create ]
   end
   resources :doses, only: [ :id, :destroy]
+  root to: 'articles#index'
+  resources :articles, except: :index
 end
